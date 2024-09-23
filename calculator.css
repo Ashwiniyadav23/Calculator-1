@@ -1,93 +1,143 @@
-body{
+body {
     justify-content: center;
     align-items: center;
     text-align: center;
     display: flex;
     background-size: cover;
     background-color: rgb(99, 96, 96);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    flex-direction: column;
 }
-.container{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgb(127, 26, 200);
-  height: 550px;
-  width: 400px;
-  border-radius: 10px;
-  border: 3px solid white;
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(127, 26, 200);
+    height: 550px;
+    width: 400px;
+    border-radius: 10px;
+    border: 3px solid white;
+    padding: 10px;
+    box-sizing: border-box;
 }
-h1{
+
+h1 {
     background-color: rgb(238, 157, 171);
     height: 45px;
-    width: 330px;
+    width: 90%;
     border-bottom-left-radius: 40px;
     border-top-right-radius: 40px;
-    margin-left: 40px;
+    margin: 0 auto 20px auto;
     border: 2px solid black;
+    font-size: 1.5rem;
+    text-align: center;
 }
-#Tie{
+
+#Tie {
     margin-top: 20px;
-    margin-left: 3.5rem;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.5rem;
-    width: 300px;
-    height: 350px;
+    width: 90%;
+    max-width: 300px;
+    height: auto;
     border-style: none;
 }
-#button{
+
+#button {
     height: 40px;
-    width: 300px;
+    width: 90%;
     border-radius: 10px;
     background-color: lavender;
     border: 2px solid red;
-    margin-left: 20px;
+    margin: 20px auto;
 }
-#button::placeholder{
+
+#button::placeholder {
     color: black;
     font-size: 20px;
 }
-.btnn{
+
+.btnn, .btno, .btnc, .btnp, .btnop {
     border-radius: 30px;
     font-size: 20px;
+    padding: 10px;
 }
-.btno{
-    border-radius: 30px;
-    font-size: 20px;
+
+.btno {
     background-color: rgb(245, 245, 82);
 }
-.btnc{
-    border-radius: 30px;
-    font-size: 20px;
+
+.btnc {
     background-color: rgb(219, 23, 23);
 }
-.btnp{
-    border-radius: 30px;
-    font-size: 20px;
+
+.btnp {
     background-color: rgb(23, 186, 219);
-
 }
 
-.btnop{
-    border-radius: 30px;
-    font-size: 20px;
-    background-color: rgb(172, 216, 215 );
-
+.btnop {
+    background-color: rgb(172, 216, 215);
 }
 
-.btnn:hover{
-    background-color: rgb(179, 129, 173);
-    
-}
-.btnb:hover{
-    background-color: rgb(179, 129, 173);
-
-}
-.btno:hover{
+.btnn:hover, .btno:hover, .btnc:hover, .btnp:hover, .btnop:hover {
     background-color: rgb(179, 129, 173);
 }
-.btnc:hover{
-    background-color: rgb(179, 129, 173);
 
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    h1 {
+        width: 100%;
+        font-size: 1.3rem;
+        height: auto;
+    }
+
+    #Tie {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        width: 100%;
+    }
+
+    #button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 1.1rem;
+    }
+
+    #Tie {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+
+    .btnn, .btno, .btnc, .btnp, .btnop {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    #button {
+        font-size: 16px;
+        padding: 10px;
+    }
 }
