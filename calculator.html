@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculator</h1>
+        <input type="text" id="button" placeholder="0" disabled>
+        <div id="Tie">
+            <button class="clear btnc">AC</button>
+            <button class="clear btnp">C</button>
+            <button class="op btno">%</button>
+            <button class="op btno">/</button>
+            <button class="no btnn">7</button>
+            <button class="no btnn">8</button>
+            <button class="no btnn">9</button>
+            <button class="op btno">*</button>
+            <button class="no btnn">4</button>
+            <button class="no btnn">5</button>
+            <button class="no btnn">6</button>
+            <button class="op btno">-</button>
+            <button class="no btnn">1</button>
+            <button class="no btnn">2</button>
+            <button class="no btnn">3</button>
+            <button class="op btno">+</button>
+            <button class="no btnn">0</button>
+            <button class="no btnn">00</button>
+            <button class="op btnn">.</button>
+            <button class="op btno">=</button>
+        </div>
+        <audio id="click-sound" src="k.mp3" preload="auto"></audio>
+        <audio id="error-sound" src="mixkit-tribal-deep-drum-echoes-575.wav" preload="auto"></audio>
+        <audio id="result-sound" src="tone (1).mp3" preload="auto"></audio>
+
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
