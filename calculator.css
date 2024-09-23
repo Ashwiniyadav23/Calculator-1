@@ -1,3 +1,4 @@
+/* Global styles */
 body {
     justify-content: center;
     align-items: center;
@@ -11,6 +12,7 @@ body {
     flex-direction: column;
 }
 
+/* Container styling */
 .container {
     position: absolute;
     top: 50%;
@@ -21,14 +23,14 @@ body {
     width: 400px;
     border-radius: 10px;
     border: 3px solid white;
-    padding: 10px;
+    padding: 20px;
     box-sizing: border-box;
 }
 
 h1 {
     background-color: rgb(238, 157, 171);
     height: 45px;
-    width: 90%;
+    width: 100%;
     border-bottom-left-radius: 40px;
     border-top-right-radius: 40px;
     margin: 0 auto 20px auto;
@@ -39,35 +41,34 @@ h1 {
 
 #Tie {
     margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.5rem;
-    width: 90%;
-    max-width: 300px;
+    width: 100%;
     height: auto;
     border-style: none;
 }
 
 #button {
     height: 40px;
-    width: 90%;
+    width: 100%;
     border-radius: 10px;
     background-color: lavender;
     border: 2px solid red;
-    margin: 20px auto;
+    margin: 20px 0;
+    font-size: 1.2rem;
 }
 
 #button::placeholder {
     color: black;
-    font-size: 20px;
+    font-size: 1rem;
 }
 
 .btnn, .btno, .btnc, .btnp, .btnop {
     border-radius: 30px;
-    font-size: 20px;
+    font-size: 1rem;
     padding: 10px;
+    width: 100%;
 }
 
 .btno {
@@ -86,58 +87,69 @@ h1 {
     background-color: rgb(172, 216, 215);
 }
 
+
 .btnn:hover, .btno:hover, .btnc:hover, .btnp:hover, .btnop:hover {
     background-color: rgb(179, 129, 173);
 }
+
 
 @media (max-width: 768px) {
     .container {
         width: 90%;
         height: auto;
         padding: 20px;
-        border-radius: 20px;
+        border-radius: 15px;
     }
 
     h1 {
-        width: 100%;
         font-size: 1.3rem;
-        height: auto;
+        width: 100%;
+        margin-bottom: 15px;
     }
 
     #Tie {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        width: 100%;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 0.8rem;
+        margin: 0 auto;
     }
 
     #button {
         width: 100%;
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    .btnn, .btno, .btnc, .btnp, .btnop {
+        padding: 8px;
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 480px) {
     .container {
-        width: 100%;
-        padding: 15px;
+        width: 95%;
         height: auto;
+        padding: 15px;
     }
 
     h1 {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
     }
 
     #Tie {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.8rem;
-    }
-
-    .btnn, .btno, .btnc, .btnp, .btnop {
-        font-size: 16px;
-        padding: 8px;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+        gap: 0.5rem;
     }
 
     #button {
-        font-size: 16px;
-        padding: 10px;
+        width: 100%;
+        height: 45px;
+        font-size: 0.9rem;
+    }
+
+    .btnn, .btno, .btnc, .btnp, .btnop {
+        padding: 6px;
+        font-size: 0.85rem;
     }
 }
